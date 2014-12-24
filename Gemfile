@@ -1,63 +1,76 @@
-source 'https://rubygems.org'
+source "http://rubygems.org"
+source "http://gems.github.com"
 
-#specify ruby version to enable the deploy to Heroku instance.
 ruby '2.1.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.1'
-
-# Use the 'puma' web server
-gem 'puma'
-
-gem 'ember-rails'
-gem 'ember-source', '~> 1.9.0' # or the version you need
-
-# Use sqlite3 as the database for Active Record
-#gem 'sqlite3'
-
-# Heroku Deployment
-# group :production do
-#   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
-#   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
-# end
+gem 'rails', '4.1.6'
+# Use postgresql as the database for Active Record
 gem 'pg'
-
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0.rc1'
-
+gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-gem 'coffee-rails-source-maps', group: :development
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+# gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
+gem 'jbuilder', '~> 2.0'
+# bundle exec rake doc:rails generates the API under doc/api.
+gem 'sdoc', '~> 0.4.0',          group: :doc
 
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
-
-gem 'haml'
+# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+gem 'spring',        group: :development
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', :platforms => [:ruby]
+gem 'thin', :platforms => [:ruby]
 
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+# Template Engine
+gem 'haml-rails'
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'json'
+gem 'friendly_id', '5.0.0.beta1'
+gem 'nokogiri'
+
+gem 'devise'
+gem 'devise_security_extension'
+gem 'devise-token_authenticatable'
+
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+
+gem 'delayed_job_active_record'
+
+gem "omniauth-facebook"
+gem 'omniauth-twitter'
+gem 'twitter'
+gem 'koala'
+gem "ransack"
+
+gem 'rails3-jquery-autocomplete'
+
+gem 'cancancan', '~> 1.9'
+
+gem 'smarter_csv', '~> 1.0.17'
+gem 'wkhtmltopdf-binary'
+gem 'wicked_pdf'
+
+gem 'searchkick'
+gem 'underscore-rails'
+gem 'chosen-rails'
+
+gem 'ruby-freshbooks'
+
+gem 'rails_admin'
+gem 'sentry-raven'
