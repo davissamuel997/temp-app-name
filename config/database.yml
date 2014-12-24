@@ -1,0 +1,39 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: my-ember-app-dev
+  pool: 5
+  host: localhost
+  username: postgres
+  password: password
+
+test:
+    adapter: postgresql
+    encoding: utf8
+    reconnect: false
+    database: my-ember-app-test
+    pool: 5
+    host: localhost
+    username: postgres
+    password: password
+
+# production:
+#     adapter: postgresql
+#     encoding: utf8
+#     reconnect: false
+#     database: railssupernaut
+#     pool: 5
+#     host: rails-supernaut.c3t8ly8irobc.us-east-1.rds.amazonaws.com
+#     username: rppush
+#     password: Juec3Fav7Met4Y
+
+# driving_loyalty:
+#   adapter: mysql2
+#   encoding: utf8
+#   reconnect: false
+#   database: mybdc
+#   pool: 5
+#   host: mybdc.ccbtnrzsg3rw.us-east-1.rds.amazonaws.com
+#   username: mybdc
+#   password: XU8a3xuF
